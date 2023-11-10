@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test Implementation
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        env:
+          - ROS_DISTRO: rolling
+    env:
+      CLANG_TIDY_ARGS: --fix --fix-errors --format-style=file
+      CLANG_TIDY: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ROS Industrial CI
+        uses: ros-industrial/industrial_ci@master
