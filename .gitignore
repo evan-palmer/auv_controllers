@@ -34,3 +34,8 @@
 # VSCode
 .vscode
 .devcontainer
+
+# ROS
+build
+install
+log
