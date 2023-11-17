@@ -1,0 +1,7 @@
+<library path="velocity_controllers">
+  <class name="velocity_controllers/IntegralSlidingModeController" type="velocity_controllers::IntegralSlidingModeController" base_class_type="controller_interface::ControllerInterface">
+    <description>
+      Integral sliding mode velocity controller for robust AUV velocity control
+    </description>
+  </class>
+</library>
